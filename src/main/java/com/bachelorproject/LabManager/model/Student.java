@@ -17,6 +17,7 @@ public class Student implements Serializable {  // helps transform class to type
     private String mtrNumber;
     private String name;
     private String email;
+    private String studyProgram;
     private String course;
     private String imageURL;
 
@@ -24,11 +25,12 @@ public class Student implements Serializable {  // helps transform class to type
     public Student() {
     }
 
-    public Student(long id, String mtrNumber, String name, String email, String course, String imageURL) {
+    public Student(long id, String mtrNumber, String name, String email, String studyProgram, String course, String imageURL) {
         this.id = id;
         this.mtrNumber = mtrNumber;
         this.name = name;
         this.email = email;
+        this.studyProgram = studyProgram;
         this.course = course;
         this.imageURL = imageURL;
     }
@@ -82,6 +84,26 @@ public class Student implements Serializable {  // helps transform class to type
         this.imageURL = imageURL;
     }
 
+    public String getStudyProgram() {
+        return studyProgram;
+    }
+
+    public void setStudyProgram(String studyProgram) {
+        this.studyProgram = studyProgram;
+    }
+
     /* methods */
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", mtrNumber='" + mtrNumber + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", studyProgram='" + studyProgram + '\'' +
+                ", course='" + course + '\'' +
+                ", imageURL='" + imageURL + '\'' +
+                '}';
+    }
 }
